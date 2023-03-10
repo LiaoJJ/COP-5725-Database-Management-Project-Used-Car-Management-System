@@ -109,7 +109,12 @@
 FROM openjdk:8-jre-alpine
 
 COPY target/boot-0.0.1-SNAPSHOT.jar /app.jar
-COPY vehicles.csv /vehicles.csv
+#RUN unzip vehicles.zip
+#COPY vehicles.csv /vehicles.csv
+
+ADD vehicles.zip /vehicles.zip
+RUN unzip vehicles.zip
+RUN rm vehicles.zip
 RUN ["chmod", "a+x", "/vehicles.csv"]
 
 #EXPOSE $PORT

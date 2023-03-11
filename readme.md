@@ -361,13 +361,14 @@ I should improve my scope and do not waste time on trivial details.
 
 
 ## Future Fix for Heroku Error (Persona notes)
-- We use Render to host our website since Heroku is no longer free. ~~heroku account is my 14gmail e-mail~~
-- We can also use Render PostgreSQL in future. 250MB free quote. 
+- We use Render `https://dashboard.render.com/` to host our website since Heroku is no longer free. ~~heroku account is my 14gmail e-mail~~
+- ~~We can not use Render PostgreSQL since my SQL command is not fully compatible with PostgreSQL. ~~
 - all file could be downloaded from my personal Google Drive folder: https://drive.google.com/drive/u/0/folders/14IeXphs0ce0CJN28RI8w49TToOnGpIkJ
 
 #### Steps to deploy again (on Heroku)
 - `cd "/Users/ljj/Documents/Courses/CS/DBMS/proj/DBMS-Project-master"` (This is on my personal mac directory)
 - we are using `https://freedb.tech/dashboard/`, go to this website to get SQL DB username and password, if this one no longer works, we can also switch to Render PostgreSQL, change in application.properties
+- freedb.tech has a limit of 800 query/hour, so if it goes down, don't worry too much, it will be back soon. https://freedb.tech/dashboard/faq.php
 - import everything from UsedCar-UpperCase.sql into https://remotemysql.com/databases.php, you may want to use DataGrip from JetBrains
 - install a JDK, then `export JAVA_HOME="path to your JDK Home"`, for mac it's ` export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home"
 `

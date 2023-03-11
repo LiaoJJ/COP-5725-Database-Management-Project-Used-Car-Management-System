@@ -361,12 +361,13 @@ I should improve my scope and do not waste time on trivial details.
 
 
 ## Future Fix for Heroku Error (Persona notes)
-- heroku account is my 14gmail e-mail
+- We use Render to host our website since Heroku is no longer free. ~~heroku account is my 14gmail e-mail~~
+- We can also use Render PostgreSQL in future. 250MB free quote. 
 - all file could be downloaded from my personal Google Drive folder: https://drive.google.com/drive/u/0/folders/14IeXphs0ce0CJN28RI8w49TToOnGpIkJ
 
-#### Steps to deploy again
+#### Steps to deploy again (on Heroku)
 - `cd "/Users/ljj/Documents/Courses/CS/DBMS/proj/DBMS-Project-master"` (This is on my personal mac directory)
-- go to https://remotemysql.com/databases.php get updated user name and password, change in application.properties
+- we are using `https://freedb.tech/dashboard/`, go to this website to get SQL DB username and password, if this one no longer works, we can also switch to Render PostgreSQL, change in application.properties
 - import everything from UsedCar-UpperCase.sql into https://remotemysql.com/databases.php, you may want to use DataGrip from JetBrains
 - install a JDK, then `export JAVA_HOME="path to your JDK Home"`, for mac it's ` export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home"
 `
@@ -375,4 +376,7 @@ I should improve my scope and do not waste time on trivial details.
   - you may want change lombak version here: https://stackoverflow.com/questions/66801256/java-lang-illegalaccesserror-class-lombok-javac-apt-lombokprocessor-cannot-acce
 - `docker build -t web . `
 - follow steps in 'https://dashboard.heroku.com/apps/used-car/deploy/heroku-container' to release it, please release it with `container`.
-- check Heroku monitor status: https://script.google.com/home/projects/1LQY1WLhNfUvUiWFN9UoXmaPJhCsvUD3xA9VnFUSP2i4rASjFtO0clnmF/edit
+- check Heroku modockerignorenitor status: https://script.google.com/home/projects/1LQY1WLhNfUvUiWFN9UoXmaPJhCsvUD3xA9VnFUSP2i4rASjFtO0clnmF/edit
+
+#### Steps to deploy again (on Render)
+- go to this website, https://dashboard.render.com/web/srv-cg5qqgseoogqpifmeop0/events, deploy by git last commit.

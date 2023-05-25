@@ -382,3 +382,4 @@ I should improve my scope and do not waste time on trivial details.
 #### Steps to deploy again (on Render)
 - go to this website, https://dashboard.render.com/web/srv-cg5qqgseoogqpifmeop0/events, deploy by git last commit.
 - Render does not deploy by Docker, it deploy by GitHub, so we have to leave the .jar file in github
+- Render has a size limit, I have to compress the vehicles.csv to smallest, using `xz` format here instead of `gzip`, cmd: ` tar cv path/to/data | xz -9 > file.tar.xz`, referring here: https://superuser.com/questions/514260/how-to-obtain-maximum-compression-with-tar-gz

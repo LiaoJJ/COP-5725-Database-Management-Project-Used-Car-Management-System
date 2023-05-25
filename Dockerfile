@@ -112,7 +112,8 @@ COPY target/boot-0.0.1-SNAPSHOT.jar /app.jar
 #RUN unzip vehicles.zip
 #COPY vehicles.csv /vehicles.csv
 
-ADD vehicles.zip /vehicles.zip
+ADD vehicles.tar.xz /vehicles.zip
+
 RUN unzip vehicles.zip
 RUN rm vehicles.zip
 RUN ["chmod", "a+x", "/vehicles.csv"]
